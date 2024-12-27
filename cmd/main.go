@@ -62,5 +62,11 @@ func main() {
     r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
     log.Println("Server run http://localhost:8080")
-    r.Run("") // r.Run(":8080")
+    
+
+    port := os.Getenv("PORT")
+    if port == "" {
+        port = "8080" // solo para local, en Heroku vendrá un número aleatorio
+    }
+    r.Run(":" + port)
 }
