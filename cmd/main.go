@@ -6,15 +6,15 @@ import (
 
     "github.com/gin-gonic/gin"
 
-    "github.com/torvictorvic/seek-v2/internal/config"
-    "github.com/torvictorvic/seek-v2/internal/handler"
-    "github.com/torvictorvic/seek-v2/internal/repository"
-    "github.com/torvictorvic/seek-v2/internal/security"
-    "github.com/torvictorvic/seek-v2/internal/service"
+    "github.com/torvictorvic/seek/internal/config"
+    "github.com/torvictorvic/seek/internal/handler"
+    "github.com/torvictorvic/seek/internal/repository"
+    "github.com/torvictorvic/seek/internal/security"
+    "github.com/torvictorvic/seek/internal/service"
 
     "github.com/swaggo/files"
     "github.com/swaggo/gin-swagger"
-    _ "github.com/torvictorvic/seek-v2/docs" 
+    _ "github.com/torvictorvic/seek/docs" 
 )
 
 // @title Sistema de Gestión de Candidatos
@@ -34,7 +34,7 @@ import (
 
 func main() {
     // Load environment variables
-    _ = os.Setenv("JWT_SECRET", "") // En prod usar .env
+    _ = os.Setenv("JWT_SECRET", "L0ng1sl4nD") // Ejemplo, en prod usar .env
 
     db := config.ConnectDB()
     defer db.Close()
@@ -62,5 +62,5 @@ func main() {
     r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
     log.Println("Server run http://localhost:8080")
-    r.Run(":8080")
+    r.Run(":") // r.Run(":8080")
 }
