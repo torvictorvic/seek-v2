@@ -6,15 +6,15 @@ import (
 
     "github.com/gin-gonic/gin"
 
-    "github.com/torvictorvic/seek/internal/config"
-    "github.com/torvictorvic/seek/internal/handler"
-    "github.com/torvictorvic/seek/internal/repository"
-    "github.com/torvictorvic/seek/internal/security"
-    "github.com/torvictorvic/seek/internal/service"
+    "github.com/torvictorvic/seek-v2/internal/config"
+    "github.com/torvictorvic/seek-v2/internal/handler"
+    "github.com/torvictorvic/seek-v2/internal/repository"
+    "github.com/torvictorvic/seek-v2/internal/security"
+    "github.com/torvictorvic/seek-v2/internal/service"
 
     "github.com/swaggo/files"
     "github.com/swaggo/gin-swagger"
-    _ "github.com/torvictorvic/seek/docs" 
+    _ "github.com/torvictorvic/seek-v2/docs" 
 )
 
 // @title Sistema de Gestión de Candidatos
