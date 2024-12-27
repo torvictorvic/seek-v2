@@ -62,5 +62,5 @@ func main() {
     r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
     log.Println("Server run http://localhost:8080")
-    r.Run(":") // r.Run(":8080")
+    r.Run("") // r.Run(":8080")
 }
